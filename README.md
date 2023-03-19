@@ -34,10 +34,15 @@ Complete and fix the existing code:
 numbers = [1,2,3,4,5]
 
 function findLargestNumber(numbers) {
-  let largestNumber = 0;
-  ....
+  let largestNumber = numbers[0];
+  for(let i=1; i<numbers.length; i++) {
+    if(numbers[i] > largestNumber) {
+      largestNumber = numbers[i];
+    }
+  }
   return largestNumber;
 }
+
 
 findLargestNumber(numbers)
 # Expected result: 5
